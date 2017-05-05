@@ -4,8 +4,9 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'new-animal',
   template: `
-    <h1>New Animal</h1>
-    <div>
+    <button *ngIf="!showForm" (click)="showFormButtonClicked()">Add a new animal</button>
+    <div *ngIf="showForm">
+      <h1>New Animal</h1>
       <div>
         <label>Enter animal species:</label>
         <input #newSpecies>
@@ -48,10 +49,16 @@ import { Animal } from './animal.model';
 })
 
 export class NewAnimalComponent {
+  showForm: boolean = false;
   @Output() newAnimalSender = new EventEmitter();
+
+  showFormButtonClicked() {
+    this.showForm = true;
+  }
 
   submitForm(species: string, name: string, age: number, diet: string, location: string, caretakers: number, sex: string, likes: string, dislikes: string) {
     var newAnimalToAdd: Animal = new Animal(species, name, age, diet, location, caretakers, sex, likes, dislikes);
+    this.showForm = false;
     this.newAnimalSender.emit(newAnimalToAdd);
   }
 }

@@ -27,6 +27,6 @@ export class AnimalListComponent {
   }
 
   onChange(optionFromMenu){
-    this.filterByAge = optionFromMenu;
+    this.filterByAge = optionFromMenu
   }
 }
