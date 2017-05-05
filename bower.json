@@ -1,0 +1,17 @@
+{
+  "name": "animal-tracker",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Nathaniel I Meyer <nathanielimeyer@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

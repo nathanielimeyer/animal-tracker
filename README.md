@@ -1,0 +1,9 @@
+Need:
+app.component
+app.module
+main
+animal.model.ts
+new-animal.component.ts
+animal-list.component.ts
+edit-animal.component.ts
+animal-age-filter.pipe.ts
